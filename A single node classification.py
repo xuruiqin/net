@@ -22,8 +22,7 @@ for i in range(8):
     for j in range(4):
             total.append(X[i][j]*W[j])
             delta=activation(total[i])
-            for k in range(4):
-                W[k]+=0.1*(label[i]-delta)*X[i][k]
+            W[j]+=0.1*(label[i]-delta)*X[i][j]
 # I hava get new weights after training, now let's test is. The outcome must comform to X and label
 test=[0]*4
 n=0.0
@@ -32,7 +31,7 @@ for m in range(4):
     test[m]=int(test[m])
     n+=test[m]*W[m]
 outcome=activation(n)
-print("My neural network's prediction of your input is : ",outcome)
+print("My neural network's prediction of your input is : ", outcome)
 
 
 
