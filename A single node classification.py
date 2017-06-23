@@ -4,7 +4,7 @@ import numpy as np
 # The last element of each training data is minus one
 X= [[0,0,0,-1],[1,0,0,-1],[0,1,0,-1],[0,0,1,-1],[1,1,0,-1],[1,0,1,-1],[0,1,1,-1],[1,1,1,-1]]
 # Some points are labeled by -1, others are 1
-label=[-1,-1,-1,-1,-1,1,1,1]
+label=[-1,-1,-1,1,-1,1,1,1]
 # the weight and threshold value are set to random numbers between 1 and 1
 import random
 W=[]
@@ -35,7 +35,7 @@ for m in range(4):
     test[m]=int(test[m])
     n+=test[m]*W[m]
 outcome=activation(n)
-print("My neural network's prediction of your input is : ", outcome)
+print("My neural network's prediction of your input is:", outcome)
 
 
 
