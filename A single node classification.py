@@ -1,5 +1,6 @@
 """The one layer Perceptron can only be used to linear divisible problems. The eight points on the vertex of
 a cube can be seperated by a plane"""
+import numpy as np
 # The last element of each training data is minus one
 X= [[0,0,0,-1],[1,0,0,-1],[0,1,0,-1],[0,0,1,-1],[1,1,0,-1],[1,0,1,-1],[0,1,1,-1],[1,1,1,-1]]
 # Some points are labeled by -1, others are 1
@@ -15,6 +16,9 @@ def activation(x):
         return 1
     else:
         return -1
+# for non-linear problem
+#def actication(x):
+#    return 1/(1+np.exp(-x))
 # process of learning
 # total is the list of activation value
 total=[]
